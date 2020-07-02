@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.slider{
+	width:960px;
+height: 400px;}
+.barner{
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	color: green;
+	font-size: 100px;
+}
+.dropdown-menu {width: 100%}
+.dropdown-menu a{ color:#fff ; }
+
+.mix{
+	height:150px;
+	width: 150px;
+}
+#photo{
+  background: #E83954;
+}
+.wrapper{
+  width: 960px;
+  margin: 10% auto 0;
+}
+a{
+  text-decoration:none;
+}
+
+.single-portfolio{
+  background-size:cover!important;
+}
+
+.single-portfolio {
+	background-image:url(IMG/tisha1.jpg);
+  position: relative;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 4px;
+  background-size: 100%;
+  background-position: center;
+  transition: 0.5s;
+  overflow: hidden;
+  font-family: poppins;
+  line-height: 1.2;
+}
+
+.single-portfolio::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(90%);
+  background-color: #262626;
+  color: #fff;
+  padding: 0 8px;
+  content: attr(data-title);
+  font-size: 24px;
+  text-align: center;
+}
+
+.single-portfolio::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  opacity: 0;
+  text-align: center;
+  padding-top: 35%;
+  font-size: 35px;
+  text-transform: uppercase;
+  content: attr(data-text);
+  transition: 0.5s;
+  margin-top: 8px;
+  transform: translateY(100%);
+}
+
+.single-portfolio:hover:after{
+  transform:translateY(0);
+  transition:0.5s 0.1s;
+  opacity:1;
+}
+.single-portfolio:hover:before{
+  transform:translateY(0);
+  padding:8px;
+  background-color:rgba(0,0,0,0.9);
+  transition:0.5s;
+}
+
+
+
+
+/* ignore the code below */
+
+
+.link-area
+{
+  position:fixed;
+  bottom:20px;
+  left:20px;  
+  padding:15px;
+  border-radius:40px;
+  background:#262626;
+}
+.link-area a
+{
+  text-decoration:none;
+  color:#fff;
+  font-size:25px;
+}
+
+
+@media only screen and (max-width:800px){
+	/* for tablets */
+	.navbar-nav{
+		width:80%;
+		padding: 0;
+	}
+	.carousel-inner{
+		width: 100%;
+	}
+	.barner{
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width:500px){
+	/* for mobile */
+	.navbar-nav{
+		width:50%;
+		
+	}
+	.carousel-inner{
+		width: 50%;
+	}
+	.barner{
+		width: 50%
+	}
+}
